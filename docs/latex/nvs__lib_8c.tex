@@ -1,0 +1,108 @@
+\hypertarget{nvs__lib_8c}{}\doxysection{src/nvs\+\_\+lib.c File Reference}
+\label{nvs__lib_8c}\index{src/nvs\_lib.c@{src/nvs\_lib.c}}
+{\ttfamily \#include \char`\"{}nvs\+\_\+lib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nvs\+\_\+flash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp32-\/hal-\/log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+system.\+h\char`\"{}}\newline
+Include dependency graph for nvs\+\_\+lib.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{nvs__lib_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{nvs__lib_8c_ab6563e1a30c05597d9048ecb6df589a1}{N\+V\+S\+\_\+\+L\+I\+B\+\_\+\+D\+E\+B\+U\+G\+\_\+\+T\+AG}}~\char`\"{}N\+VS\char`\"{};
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{nvs__lib_8c_ab721cf6925deae46a430ce75ab5a5c9d}{N\+V\+S\+\_\+read\+Value}} (nvs\+\_\+handle handle, const char $\ast$key, uint8\+\_\+t $\ast$data, size\+\_\+t expected\+\_\+length, bool silent)
+\begin{DoxyCompactList}\small\item\em Read a variable/array from the Non-\/\+Volatile Storage. Function for reading from the Non-\/\+Volatile Storage using a key identifier to locate the data,. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{nvs__lib_8c_af8a38aeba883334bc6141295635c4750}{N\+V\+S\+\_\+write\+Value}} (nvs\+\_\+handle handle, const char $\ast$key, const uint8\+\_\+t $\ast$data, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Write a variable/array from the Non-\/\+Volatiale Storage. Function for writing a variable or array into the Non-\/\+Volatile Storage using a key identifier. This function avoids re-\/writing redundant data by reading the contents of the memory chunk pointed by the key identifier. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{nvs__lib_8c_afb836950fbc17b0c85ef5f8997684c76}{N\+V\+S\+\_\+required\+Bytes}} (nvs\+\_\+handle handle, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Check the required bytes to store the data key-\/pair in N\+VS. Function for estimating the number of bytes required to store the data labeled using a key identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{nvs__lib_8c_ab6563e1a30c05597d9048ecb6df589a1}\label{nvs__lib_8c_ab6563e1a30c05597d9048ecb6df589a1}} 
+\index{nvs\_lib.c@{nvs\_lib.c}!NVS\_LIB\_DEBUG\_TAG@{NVS\_LIB\_DEBUG\_TAG}}
+\index{NVS\_LIB\_DEBUG\_TAG@{NVS\_LIB\_DEBUG\_TAG}!nvs\_lib.c@{nvs\_lib.c}}
+\doxysubsubsection{\texorpdfstring{NVS\_LIB\_DEBUG\_TAG}{NVS\_LIB\_DEBUG\_TAG}}
+{\footnotesize\ttfamily \#define N\+V\+S\+\_\+\+L\+I\+B\+\_\+\+D\+E\+B\+U\+G\+\_\+\+T\+AG~\char`\"{}N\+VS\char`\"{};}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{nvs__lib_8c_ab721cf6925deae46a430ce75ab5a5c9d}\label{nvs__lib_8c_ab721cf6925deae46a430ce75ab5a5c9d}} 
+\index{nvs\_lib.c@{nvs\_lib.c}!NVS\_readValue@{NVS\_readValue}}
+\index{NVS\_readValue@{NVS\_readValue}!nvs\_lib.c@{nvs\_lib.c}}
+\doxysubsubsection{\texorpdfstring{NVS\_readValue()}{NVS\_readValue()}}
+{\footnotesize\ttfamily bool N\+V\+S\+\_\+read\+Value (\begin{DoxyParamCaption}\item[{nvs\+\_\+handle}]{handle,  }\item[{const char $\ast$}]{key,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{size\+\_\+t}]{expected\+\_\+length,  }\item[{bool}]{silent }\end{DoxyParamCaption})}
+
+
+
+Read a variable/array from the Non-\/\+Volatile Storage. Function for reading from the Non-\/\+Volatile Storage using a key identifier to locate the data,. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nvs\+\_\+handle} & N\+VS handle. \\
+\hline
+\mbox{\texttt{ in}}  & {\em char$\ast$} & N\+VS key identifier string. (e.\+g. \char`\"{}\+M\+A\+C\char`\"{}, \char`\"{}\+J\+W\+T\char`\"{}, \char`\"{}\+I\+D\char`\"{}) \\
+\hline
+\mbox{\texttt{ out}}  & {\em uint8\+\_\+t} & array to store the retrieved variable/array. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size\+\_\+t} & Expected variable/array size in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{T\+R\+UE}} if successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{nvs__lib_8c_afb836950fbc17b0c85ef5f8997684c76}\label{nvs__lib_8c_afb836950fbc17b0c85ef5f8997684c76}} 
+\index{nvs\_lib.c@{nvs\_lib.c}!NVS\_requiredBytes@{NVS\_requiredBytes}}
+\index{NVS\_requiredBytes@{NVS\_requiredBytes}!nvs\_lib.c@{nvs\_lib.c}}
+\doxysubsubsection{\texorpdfstring{NVS\_requiredBytes()}{NVS\_requiredBytes()}}
+{\footnotesize\ttfamily uint32\+\_\+t N\+V\+S\+\_\+required\+Bytes (\begin{DoxyParamCaption}\item[{nvs\+\_\+handle}]{handle,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Check the required bytes to store the data key-\/pair in N\+VS. Function for estimating the number of bytes required to store the data labeled using a key identifier. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nvs\+\_\+handle} & N\+VS handle. \\
+\hline
+\mbox{\texttt{ in}}  & {\em char$\ast$} & N\+VS key identifier string. (e.\+g. \char`\"{}\+M\+A\+C\char`\"{}, \char`\"{}\+J\+W\+T\char`\"{}, \char`\"{}\+I\+D\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an {\ttfamily uint32\+\_\+t} containing the number of bytes required to store the data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{nvs__lib_8c_af8a38aeba883334bc6141295635c4750}\label{nvs__lib_8c_af8a38aeba883334bc6141295635c4750}} 
+\index{nvs\_lib.c@{nvs\_lib.c}!NVS\_writeValue@{NVS\_writeValue}}
+\index{NVS\_writeValue@{NVS\_writeValue}!nvs\_lib.c@{nvs\_lib.c}}
+\doxysubsubsection{\texorpdfstring{NVS\_writeValue()}{NVS\_writeValue()}}
+{\footnotesize\ttfamily bool N\+V\+S\+\_\+write\+Value (\begin{DoxyParamCaption}\item[{nvs\+\_\+handle}]{handle,  }\item[{const char $\ast$}]{key,  }\item[{const uint8\+\_\+t $\ast$}]{data,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Write a variable/array from the Non-\/\+Volatiale Storage. Function for writing a variable or array into the Non-\/\+Volatile Storage using a key identifier. This function avoids re-\/writing redundant data by reading the contents of the memory chunk pointed by the key identifier. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nvs\+\_\+handle} & N\+VS handle. \\
+\hline
+\mbox{\texttt{ in}}  & {\em char$\ast$} & N\+VS key identifier string. (e.\+g. \char`\"{}\+M\+A\+C\char`\"{}, \char`\"{}\+J\+W\+T\char`\"{}, \char`\"{}\+I\+D\char`\"{}) \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & array to store the retrieved variable/array. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size\+\_\+t} & Variable/array size in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{T\+R\+UE}} if successful. 
+\end{DoxyReturn}
