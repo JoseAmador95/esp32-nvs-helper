@@ -98,15 +98,24 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab721cf6925deae46a430ce75ab5a5c9d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvs__lib_8c.html#ab721cf6925deae46a430ce75ab5a5c9d">NVS_readValue</a> (nvs_handle handle, const char *key, uint8_t *data, size_t expected_length, bool silent)</td></tr>
-<tr class="memdesc:ab721cf6925deae46a430ce75ab5a5c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a variable/array from the Non-Volatile Storage. Function for reading from the Non-Volatile Storage using a key identifier to locate the data,.  <a href="nvs__lib_8c.html#ab721cf6925deae46a430ce75ab5a5c9d">More...</a><br /></td></tr>
-<tr class="separator:ab721cf6925deae46a430ce75ab5a5c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29314a36e6a1e50a4455cd63588e96c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvs__lib_8c.html#a29314a36e6a1e50a4455cd63588e96c8">NVS_readValue</a> (nvs_handle handle, const char *key, uint8_t *data, size_t expected_length)</td></tr>
+<tr class="memdesc:a29314a36e6a1e50a4455cd63588e96c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from the Non-Volatile Storage.  <a href="nvs__lib_8c.html#a29314a36e6a1e50a4455cd63588e96c8">More...</a><br /></td></tr>
+<tr class="separator:a29314a36e6a1e50a4455cd63588e96c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8a38aeba883334bc6141295635c4750"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvs__lib_8c.html#af8a38aeba883334bc6141295635c4750">NVS_writeValue</a> (nvs_handle handle, const char *key, const uint8_t *data, size_t len)</td></tr>
-<tr class="memdesc:af8a38aeba883334bc6141295635c4750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a variable/array from the Non-Volatiale Storage. Function for writing a variable or array into the Non-Volatile Storage using a key identifier. This function avoids re-writing redundant data by reading the contents of the memory chunk pointed by the key identifier.  <a href="nvs__lib_8c.html#af8a38aeba883334bc6141295635c4750">More...</a><br /></td></tr>
+<tr class="memdesc:af8a38aeba883334bc6141295635c4750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write to the Non-Volatiale Storage.  <a href="nvs__lib_8c.html#af8a38aeba883334bc6141295635c4750">More...</a><br /></td></tr>
 <tr class="separator:af8a38aeba883334bc6141295635c4750"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb836950fbc17b0c85ef5f8997684c76"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvs__lib_8c.html#afb836950fbc17b0c85ef5f8997684c76">NVS_requiredBytes</a> (nvs_handle handle, const char *key)</td></tr>
-<tr class="memdesc:afb836950fbc17b0c85ef5f8997684c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the required bytes to store the data key-pair in NVS. Function for estimating the number of bytes required to store the data labeled using a key identifier.  <a href="nvs__lib_8c.html#afb836950fbc17b0c85ef5f8997684c76">More...</a><br /></td></tr>
+<tr class="memdesc:afb836950fbc17b0c85ef5f8997684c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the required bytes to store the data key-pair in NVS.  <a href="nvs__lib_8c.html#afb836950fbc17b0c85ef5f8997684c76">More...</a><br /></td></tr>
 <tr class="separator:afb836950fbc17b0c85ef5f8997684c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe5e3797f537c861177483c33a3b1ebe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvs__lib_8c.html#afe5e3797f537c861177483c33a3b1ebe">NVS_confirmedWrite</a> (nvs_handle handle, const char *key, const uint8_t *data, size_t len)</td></tr>
+<tr class="memdesc:afe5e3797f537c861177483c33a3b1ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes data into the NVS and confirms the content.  <a href="nvs__lib_8c.html#afe5e3797f537c861177483c33a3b1ebe">More...</a><br /></td></tr>
+<tr class="separator:afe5e3797f537c861177483c33a3b1ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf10036ffbfd111a4192d0bc365091cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvs__lib_8c.html#abf10036ffbfd111a4192d0bc365091cd">NVS_resetFlash</a> (nvs_handle handle)</td></tr>
+<tr class="memdesc:abf10036ffbfd111a4192d0bc365091cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases all the keys in a namespace.  <a href="nvs__lib_8c.html#abf10036ffbfd111a4192d0bc365091cd">More...</a><br /></td></tr>
+<tr class="separator:abf10036ffbfd111a4192d0bc365091cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f490c9e9309a3329ac948eeb15bda4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvs__lib_8c.html#a2f490c9e9309a3329ac948eeb15bda4f">NVS_eraseKey</a> (nvs_handle handle, const char *key)</td></tr>
+<tr class="memdesc:a2f490c9e9309a3329ac948eeb15bda4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases a key in a NVS namespace.  <a href="nvs__lib_8c.html#a2f490c9e9309a3329ac948eeb15bda4f">More...</a><br /></td></tr>
+<tr class="separator:a2f490c9e9309a3329ac948eeb15bda4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ab6563e1a30c05597d9048ecb6df589a1"></a>
@@ -124,8 +133,98 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab721cf6925deae46a430ce75ab5a5c9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab721cf6925deae46a430ce75ab5a5c9d">&#9670;&nbsp;</a></span>NVS_readValue()</h2>
+<a id="afe5e3797f537c861177483c33a3b1ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe5e3797f537c861177483c33a3b1ebe">&#9670;&nbsp;</a></span>NVS_confirmedWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NVS_confirmedWrite </td>
+          <td>(</td>
+          <td class="paramtype">nvs_handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes data into the NVS and confirms the content. </p>
+<p>This function calls <code>NVS_writeValue</code> and then confirms the integrity of the data using <code>NVS_readValue</code>. If the data at any stage cannot be confirmed, the function tries to delete the key-data-pair. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nvs_handle</td><td>NVS handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>NVS key identifier string. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uint8_t*</td><td>Pointer to the data to be stored. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size_t</td><td>Size of the data to store in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <code>true</code> if the data was successfuly written and confirmed. </dd></dl>
+
+</div>
+</div>
+<a id="a2f490c9e9309a3329ac948eeb15bda4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f490c9e9309a3329ac948eeb15bda4f">&#9670;&nbsp;</a></span>NVS_eraseKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NVS_eraseKey </td>
+          <td>(</td>
+          <td class="paramtype">nvs_handle&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erases a key in a NVS namespace. </p>
+<p>Erases a key in a NVS namespace. The namespace must be previously opened using the <code>nvs_open</code> function from the IDF. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nvs_handle</td><td>NVS handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>Key in namespace to erase. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <code>true</code> if the key was sucessfully erased. </dd></dl>
+
+</div>
+</div>
+<a id="a29314a36e6a1e50a4455cd63588e96c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29314a36e6a1e50a4455cd63588e96c8">&#9670;&nbsp;</a></span>NVS_readValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -152,13 +251,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>expected_length</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>silent</em>&#160;</td>
+          <td class="paramname"><em>expected_length</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -168,17 +261,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Read a variable/array from the Non-Volatile Storage. Function for reading from the Non-Volatile Storage using a key identifier to locate the data,. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Read from the Non-Volatile Storage. </p>
+<p>Function for reading from the Non-Volatile Storage using a key identifier to locate the data. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">nvs_handle</td><td>NVS handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>NVS key identifier string. (e.g. "MAC", "JWT", "ID") </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">uint8_t</td><td>array to store the retrieved variable/array. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size_t</td><td>Expected variable/array size in bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>NVS key identifier string. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">uint8_t</td><td>Pointer to the array to store the retrieved data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size_t</td><td>Expected data size in bytes. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns <b>TRUE</b> if successful. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <code>true</code> if successful. </dd></dl>
 
 </div>
 </div>
@@ -208,15 +301,42 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check the required bytes to store the data key-pair in NVS. Function for estimating the number of bytes required to store the data labeled using a key identifier. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Check the required bytes to store the data key-pair in NVS. </p>
+<p>Function for estimating the number of bytes required to store the data labeled using a key identifier. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">nvs_handle</td><td>NVS handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>NVS key identifier string. (e.g. "MAC", "JWT", "ID") </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>NVS key identifier string. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns an <code>uint32_t</code> containing the number of bytes required to store the data. </dd></dl>
+
+</div>
+</div>
+<a id="abf10036ffbfd111a4192d0bc365091cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf10036ffbfd111a4192d0bc365091cd">&#9670;&nbsp;</a></span>NVS_resetFlash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NVS_resetFlash </td>
+          <td>(</td>
+          <td class="paramtype">nvs_handle&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erases all the keys in a namespace. </p>
+<p>This function deletes all the contents of the NVS namespace. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nvs_handle</td><td>NVS handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <code>true</code> if the NVS was sucessfully erased. </dd></dl>
 
 </div>
 </div>
@@ -258,17 +378,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Write a variable/array from the Non-Volatiale Storage. Function for writing a variable or array into the Non-Volatile Storage using a key identifier. This function avoids re-writing redundant data by reading the contents of the memory chunk pointed by the key identifier. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Write to the Non-Volatiale Storage. </p>
+<p>Function for writing data into the Non-Volatile Storage using a key identifier. This function avoids re-writing redundant data by reading the contents of the key-pair segment. pointed by the key identifier. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">nvs_handle</td><td>NVS handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>NVS key identifier string. (e.g. "MAC", "JWT", "ID") </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">uint8_t</td><td>array to store the retrieved variable/array. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size_t</td><td>Variable/array size in bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>NVS key identifier string. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uint8_t*</td><td>Pointer to the data to be stored. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size_t</td><td>Size of the data to store in bytes. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns <b>TRUE</b> if successful. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <code>true</code> if successful. </dd></dl>
 
 </div>
 </div>

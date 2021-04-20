@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include "nvs_lib.h"
 #include "esp_system.h"
+#include "unity.h"
 
 #define NVS_NAMESPACE "p1"
 #define KEY1 "array"
@@ -41,31 +42,47 @@ void setup()
   ESP_LOGV(DEBUG_TAG, "blob1 written");
 
   ESP_LOGV(DEBUG_TAG, "Starting to write blob2");
-  NVS_writeValue(handle, KEY2, (uint8_t *)blob2, 18);
+  NVS_confirmedWrite(handle, KEY2, (uint8_t *)blob2, 18);
   ESP_LOGV(DEBUG_TAG, "blob2 written");
 
   uint8_t buff1[4], buff2[18];
   ESP_LOGV(DEBUG_TAG, "Reading from key1");
-  res = NVS_readValue(handle, KEY1, buff1, 4, false);
+  res = NVS_readValue(handle, KEY1, buff1, 4);
   ESP_LOGV(DEBUG_TAG, "Reading status for key1: %d", res);
 
   ESP_LOGV(DEBUG_TAG, "Reading from key1");
-  NVS_readValue(handle, KEY2, buff2, 18, false);
+  NVS_readValue(handle, KEY2, buff2, 18);
   ESP_LOGV(DEBUG_TAG, "Reading status for key1: %d", res);
 
+  ESP_LOGV(DEBUG_TAG, "Erasing %s", KEY1);
+  NVS_eraseKey(handle, KEY1);
+
+  ESP_LOGV(DEBUG_TAG, "Reading from key1");
+  res = NVS_readValue(handle, KEY1, buff1, 4);
+  ESP_LOGV(DEBUG_TAG, "Reading status for key1: %d", res);
+
+  ESP_LOGV(DEBUG_TAG, "Erasing NVS");
+  NVS_resetFlash(handle);
+
+  ESP_LOGV(DEBUG_TAG, "Reading from key1");
+  NVS_readValue(handle, KEY2, buff2, 18);
+  ESP_LOGV(DEBUG_TAG, "Reading status for key1: %d", res);
+  
 
   if (memcmp(blob1, buff1, 4) == 0)
   {
     ESP_LOGI(DEBUG_TAG, "blob1 equals buff1");
+    ESP_LOG_BUFFER_HEX_LEVEL(DEBUG_TAG, blob1, 4, ESP_LOG_VERBOSE);
   }
   else
   {
-    ESP_LOGI(DEBUG_TAG, "blob1 not equals buff1");
+    ESP_LOGV(DEBUG_TAG, "blob1 not equals buff1");
   }
 
   if (memcmp(blob2, buff2, 18) == 0)
   {
-    ESP_LOGI(DEBUG_TAG, "blob2 equals buff2");
+    ESP_LOGV(DEBUG_TAG, "blob2 equals buff2");
+    ESP_LOG_BUFFER_CHAR(DEBUG_TAG, blob2, 18);
   }
 
   else
